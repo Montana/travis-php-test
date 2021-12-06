@@ -6,4 +6,4 @@ dist:
   - trusty
 
 install: skip
-script: skip
+script: php --version
