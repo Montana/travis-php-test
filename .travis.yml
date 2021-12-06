@@ -1,29 +1,9 @@
 language: php
-group: edge
-
+php:
+  - nightly
+ 
 dist:
   - trusty
-sudo: required
 
-# env:
-#   global:
-#     - CACHE_DIR=$([ $TRAVIS_OS_NAME = 'linux' ] && echo "FOO" || echo "BAR")
-
-# cache:
-#   directories:
-#     - $CACHE_DIR
-install:
-- cp $HOME/.php-build/share/php-build/default_configure_options $HOME
-- rm -rf $HOME/.phpenv
-- git clone 'https://github.com/phpenv/phpenv.git' $HOME/.phpenv
-- eval "$($HOME/.phpenv/bin/phpenv init -)"
-- pushd $HOME/.php-build
-- git checkout master
-- git reset --hard origin/master
-- git pull
-- popd
-- mv $HOME/default_configure_options $HOME/.php-build/share/php-build/default_configure_options
-- sed -i -e '/xdebug/d' ~/.php-build/share/php-build/definitions/master
-- sed -i -e 's/--without-pear/--with-pear/' ~/.php-build/share/php-build/default_configure_options
-
+install: skip
 script: skip
