@@ -1,5 +1,7 @@
 language: php
-    - "nightly"
+php:
+  - nightly
+ 
 dist:
   - trusty
 sudo: required
