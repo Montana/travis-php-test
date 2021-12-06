@@ -1,18 +1,15 @@
-dist: xenial
 language: php
 
-env:
-  global:
-    - SETUP=stable
+dist:
+  - trusty
+sudo: required
 
-matrix:
-  fast_finish: true
-  include:
-    - php: nightly
-  
-cache:
-  directories:
-    - $HOME/.composer/cache
+# env:
+#   global:
+#     - CACHE_DIR=$([ $TRAVIS_OS_NAME = 'linux' ] && echo "FOO" || echo "BAR")
 
-services:
-  - docker 
+# cache:
+#   directories:
+#     - $CACHE_DIR
+install: skip
+script: skip
