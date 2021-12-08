@@ -1,7 +1,8 @@
 ---
 language: php
 php:
-  - nightly
+ - "8.1"
+ - "nightly"
  
 dist:
   - trusty
