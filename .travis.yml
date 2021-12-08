@@ -1,10 +1,7 @@
+dist: focal
 language: php
+php:
+ - "8.1"
 
-jobs:
-  include:
-    - dist: focal
-      language: __ubuntu_2004__
-      group: dev
-      env:
-        - RELEASE=focal
-      name: focal
+install: skip
+script: php --version
