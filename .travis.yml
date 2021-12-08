@@ -1,11 +1,8 @@
 ---
+dist: focal
 language: php
 php:
- - "8.1"
  - "nightly"
- 
-dist:
-  - trusty
 
 install: skip
 script: php --version
