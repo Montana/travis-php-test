@@ -11,8 +11,10 @@ before_install:
     sudo apt install -y lsb-release ca-certificates apt-transport-https
     software-properties-common gnupg2
   - 'wget -qO - https://packages.sury.org/php/apt.gpg | sudo apt-key add -'
+dist: focal
+install:
   - sudo apt install php8.1
   - sudo update-alternatives --set php /usr/bin/php8.1
-dist: focal
+  - sudo update-alternatives --config php
 language: generic
 script: php --version
