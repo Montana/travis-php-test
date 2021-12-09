@@ -1,7 +1,6 @@
-dist: focal
+sudo: false
 language: php
-php:
- - "8.1"
 
-install: skip
-script: php --version
+php:
+  - 8.0
+  - nightly
