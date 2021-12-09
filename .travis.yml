@@ -12,8 +12,7 @@ before_install:
     software-properties-common gnupg2
   - 'wget -qO - https://packages.sury.org/php/apt.gpg | sudo apt-key add -'
   - sudo apt install php8.1
-  - sudo a2dismod php7.4.6
-  - sudo a2enmod php8.1
+  - sudo update-alternatives --set php /usr/bin/php8.1
 dist: focal
 language: generic
 script: php --version
