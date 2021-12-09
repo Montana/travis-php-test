@@ -1,12 +1,10 @@
-dist: xenial
-language: php
-before_install:
-        - sudo apt update
+---
 addons:
   apt:
     sources:
-      - ppa:ondrej/php
-    packages:
-    - php8.1
-    
-install: skip
+      - sourceline: "ppa:ondrej/php"
+    update: true
+before_install:
+  - "sudo apt-get -y install libxml2-dev"
+dist: xenial
+language: php
