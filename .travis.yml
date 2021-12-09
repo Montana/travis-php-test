@@ -1,13 +1,16 @@
 ---
 addons:
   apt:
-    packages: php8.1
+    packages:
     sources:
       - sourceline: "ppa:ondrej/php"
     update: true
 before_install:
+  - "sudo apt update"
   - "sudo apt-get -y install libxml2-dev"
   - "sudo apt install lsb-release ca-certificates apt-transport-https software-properties-common -y"
+  - "sudo apt install php8.1"
+  
 dist: xenial
 install: skip
 language: php
