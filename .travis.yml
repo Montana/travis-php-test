@@ -1,12 +1,12 @@
-dist: focal
+dist: xenial
 language: php
-php:
-  - 8.0
-  - nightly
-
 before_install:
         - sudo apt update
-        - sudo apt install lsb-release ca-certificates apt-transport-https software-properties-common -y
-        - sudo apt install php8.1
-
+addons:
+  apt:
+    sources:
+      - ppa:ondrej/php
+    packages:
+    - php8.1
+    
 install: skip
