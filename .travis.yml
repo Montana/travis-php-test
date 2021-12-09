@@ -14,6 +14,7 @@ before_install:
 dist: focal
 install:
   - sudo apt install php8.1
-  - sudo update-alternatives --config php
+  - sudo update-alternatives --set php /usr/bin/php8.1 
+  - sudo update-alternatives --config php < 1.txt
 language: generic
 script: php --version
