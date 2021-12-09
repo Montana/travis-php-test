@@ -9,9 +9,10 @@ addons:
 before_install:
   - "sudo apt update"
   - "sudo apt-get -y install libxml2-dev"
-  - "sudo apt install lsb-release ca-certificates apt-transport-https software-properties-common -y"
-  - "sudo apt install php8.1"
-  
-dist: xenial
+  - "sudo apt install -y lsb-release ca-certificates apt-transport-https software-properties-common gnupg2"
+  - echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/sury-php.list"
+  - "wget -qO - https://packages.sury.org/php/apt.gpg | sudo apt-key add -"
+   
+dist: focal
 install: skip
 language: php
