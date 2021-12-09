@@ -4,6 +4,7 @@ addons:
     packages:
     sources:
       - sourceline: "ppa:ondrej/php"
+      - sourceline: "deb http://ftp.de.debian.org/debian sid main"
     update: true
 before_install:
   - "sudo apt update"
