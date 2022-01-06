@@ -18,4 +18,4 @@ install:
   - sudo update-alternatives --config php < 1.txt
 language: generic
 
-# Test PHP 8.1
+# Test PHP 8.1.0
